@@ -1,7 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import Images from './containers/Images';
+
 render(
-  <h1>Image Scroll view</h1>,
+  <Images />,
   document.querySelector('#app'),
 );
