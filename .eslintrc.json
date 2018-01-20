@@ -1,0 +1,20 @@
+{
+  "extends": "airbnb",
+  "env": {
+      "browser": true,
+      "node": true
+  },
+  "plugins": [
+      "react"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      }
+  },
+  "rules": {
+      "arrow-body-style": 0,
+      "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+      "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }]
+  }
+}
