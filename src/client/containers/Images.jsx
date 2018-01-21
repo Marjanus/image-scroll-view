@@ -34,7 +34,7 @@ export default class Images extends Component {
   }
 
   fetchImages() {
-    axios.get(`https://limitless-beyond-79088.herokuapp.com/images?page=${this.state.page}`)
+    axios.get(`https://limitless-beyond-79088.herokuapp.com/?page=${this.state.page}`)
       .then((response) => {
         this.setState({ images: [...this.state.images, ...response.data] });
       })
