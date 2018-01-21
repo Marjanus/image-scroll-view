@@ -22,7 +22,8 @@ axios.get(`${ROOT_URL}${API_KEY}&per_page=500&format=json&nojsoncallback=1`)
         id: item.id,
         secret: item.secret,
         title: item.title,
-        src: `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`,
+        src: `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}_z.jpg`,
+        original: `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`,
       };
     });
   })
@@ -35,4 +36,4 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('Listening on 3000'));
+app.listen(process.env.PORT || 3000, () => console.log('Express server is up and running!'));

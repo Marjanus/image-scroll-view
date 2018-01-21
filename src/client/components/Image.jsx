@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 const Image = (props) => {
   return (
-    <li>
-      <div>{props.title}</div>
-      <div><img src={props.src} alt={props.title} /></div>
+    <li className="image">
+      <div className="image-title"><h4>{props.title || 'Flickr Image'}</h4></div>
+      <div className="image-thumbnail">
+        <a href={props.original} target="_blank">
+          <img src={props.src} alt={props.title} />
+        </a>
+      </div>
     </li>
   );
 };
@@ -13,6 +17,7 @@ const Image = (props) => {
 Image.propTypes = {
   title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
+  original: PropTypes.string.isRequired,
 };
 
 export default Image;
