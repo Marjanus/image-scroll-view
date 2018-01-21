@@ -19118,7 +19118,7 @@ var Images = function (_Component) {
     value: function fetchImages() {
       var _this2 = this;
 
-      _axios2.default.get('http://localhost:3000?page=' + this.state.page).then(function (response) {
+      _axios2.default.get('https://limitless-beyond-79088.herokuapp.com/?page=' + this.state.page).then(function (response) {
         _this2.setState({ images: [].concat(_toConsumableArray(_this2.state.images), _toConsumableArray(response.data)) });
       }).catch(function (error) {
         console.log(error);
