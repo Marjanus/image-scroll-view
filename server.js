@@ -32,8 +32,11 @@ axios.get(`${ROOT_URL}${API_KEY}&per_page=500&format=json&nojsoncallback=1`)
   });
 
 app.get('/', (req, res) => {
+  res.send('Images scroll view');
+});
+
+app.get('/images', (req, res) => {
   res.send(images.slice((req.query.page - 1) * SENT_IMAGES, req.query.page * SENT_IMAGES));
 });
 
-
-app.listen(process.env.PORT || 3000, () => console.log('Express server is up and running!'));
+app.listen(.process.env.port || 3000, () => console.log('Express server is up and running!'));

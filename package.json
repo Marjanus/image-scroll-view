@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "./node_modules/webpack/bin/webpack.js -p && node server.js",
+    "start": "webpack-dev-server",
     "start-dev": "nf start -p 3000",
     "eslint": "eslint src"
   },
